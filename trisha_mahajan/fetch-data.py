@@ -26,8 +26,7 @@ def fetch_repositories(topic, category_label, max_results=50):
         "order": "desc",
         "per_page": max_results,
     }
-
-    # Custom Header (Good practice for GitHub API)
+    
     headers = {"Accept": "application/vnd.github.v3+json"}
 
     response = requests.get(SEARCH_URL, headers=headers, params=params)
@@ -73,11 +72,10 @@ def main():
 
     # Convert to Pandas DataFrame
     df = pd.DataFrame(all_dataset_rows)
-    # 1. Ensure output directory exists
+    # Ensure output directory exists
     output_dir = "data"
     os.makedirs(output_dir, exist_ok=True)
 
-    # 2. Save file
     output_path = os.path.join(output_dir, "dataset.csv")
     df.to_csv(output_path, index=False)
 
