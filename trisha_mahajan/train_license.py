@@ -30,4 +30,4 @@ def to_license_family(spdx_id):
         return "Permissive"
     if spdx_id in COPYLEFT:
         return "Copyleft"
-    return "Unknown"  # rare/unrecognized id
+    return "Unknown"
