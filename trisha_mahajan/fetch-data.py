@@ -14,7 +14,6 @@ TOPICS_MAP = {
     "mobile": "Mobile Dev",
 }
 
-
 def fetch_repositories(topic, category_label, max_results=50):
     """Fetches public repositories from GitHub based on topic."""
     print(f"Fetching projects for category: {category_label}...")
